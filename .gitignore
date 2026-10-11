@@ -1,0 +1,20 @@
+# Gradle / build output
+.gradle/
+build/
+.kotlin/
+
+# IDE
+.idea/
+
+# Claude Code local settings (machine-specific paths & permissions)
+.claude/settings.local.json
+
+# Whisper: native lib ships inside the mod jar (whisper-jni) and the model is
+# downloaded on first launch — neither belongs in git.
+*.bin
+*.gguf
+
+# Fabric dev-run dir & logs
+run/
+*.log
+.DS_Store

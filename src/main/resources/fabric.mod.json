@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "pv-addon-livetranslate",
+  "version": "${version}",
+  "name": "Plasmo Voice Live Translate",
+  "description": "Embedded local voice translation, defaulting to Russian to Portuguese. Whisper.cpp and TranslateGemma run inside Minecraft. Models download automatically once; no external programs or cloud inference.",
+  "authors": ["rasketeki"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.livetranslate.LiveTranslateMod"
+      }
+    ]
+  },
+  "mixins": [
+    "pv-addon-livetranslate.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "fabric-api": "*",
+    "fabric-language-kotlin": ">=1.13.0",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "plasmovoice": ">=2.1.0"
+  }
+}
